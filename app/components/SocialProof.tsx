@@ -5,6 +5,11 @@ import { siteData } from "../data/siteData";
 export default function SocialProof() {
   const { socialProof } = siteData;
 
+  // Handle empty logos array
+  if (!socialProof.logos || socialProof.logos.length === 0) {
+    return null;
+  }
+
   return (
     <section className="py-16 bg-white border-y border-gray-200/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

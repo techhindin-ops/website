@@ -90,30 +90,30 @@ export const siteData = {
     description:
       "We proudly support EPC companies, manufacturers, and service providers from every corner of the solar industry.",
     items: [
-      // {
-      //   name: "Client Name 1",
-      //   company: "Company Name 1",
-      //   role: "CEO",
-      //   content:
-      //     "This platform has transformed how we manage our solar projects. The efficiency gains are remarkable.",
-      //   rating: 5,
-      // },
-      // {
-      //   name: "Client Name 2",
-      //   company: "Company Name 2",
-      //   role: "Operations Manager",
-      //   content:
-      //     "techHind has streamlined our entire workflow. Highly recommended for any solar EPC company.",
-      //   rating: 5,
-      // },
-      // {
-      //   name: "Client Name 3",
-      //   company: "Company Name 3",
-      //   role: "Project Director",
-      //   content:
-      //     "The best investment we've made for our business. It pays for itself in time saved alone.",
-      //   rating: 5,
-      // },
+      {
+        name: "Client Name 1",
+        company: "Company Name 1",
+        role: "CEO",
+        content:
+          "This platform has transformed how we manage our solar projects. The efficiency gains are remarkable.",
+        rating: 5,
+      },
+      {
+        name: "Client Name 2",
+        company: "Company Name 2",
+        role: "Operations Manager",
+        content:
+          "techHind has streamlined our entire workflow. Highly recommended for any solar EPC company.",
+        rating: 5,
+      },
+      {
+        name: "Client Name 3",
+        company: "Company Name 3",
+        role: "Project Director",
+        content:
+          "The best investment we've made for our business. It pays for itself in time saved alone.",
+        rating: 5,
+      },
     ],
   },
 
@@ -167,12 +167,12 @@ export const siteData = {
   socialProof: {
     title: "Trusted by Leading Solar Companies",
     logos: [
-      // { name: "Solar Energy Corp", placeholder: "SEC" },
-      // { name: "Green Power Solutions", placeholder: "GPS" },
-      // { name: "Sunshine EPC", placeholder: "SEPC" },
-      // { name: "Renewable Energy Co", placeholder: "REC" },
-      // { name: "Solar Tech India", placeholder: "STI" },
-      // { name: "Clean Energy Partners", placeholder: "CEP" },
+      { name: "Solar Energy Corp", placeholder: "SEC" },
+      { name: "Green Power Solutions", placeholder: "GPS" },
+      { name: "Sunshine EPC", placeholder: "SEPC" },
+      { name: "Renewable Energy Co", placeholder: "REC" },
+      { name: "Solar Tech India", placeholder: "STI" },
+      { name: "Clean Energy Partners", placeholder: "CEP" },
     ],
   },
 

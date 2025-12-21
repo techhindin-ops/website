@@ -3,8 +3,24 @@
 import { Star, Quote } from "lucide-react";
 import { siteData } from "../data/siteData";
 
+interface Testimonial {
+  name: string;
+  company: string;
+  role: string;
+  content: string;
+  rating: number;
+}
+
 export default function Testimonials() {
   const { testimonials } = siteData;
+
+  // Handle empty testimonials array
+  if (!testimonials.items || testimonials.items.length === 0) {
+    return null;
+  }
+
+  // Type assertion to help TypeScript
+  const testimonialItems = testimonials.items as Testimonial[];
 
   return (
     <section className="py-24 bg-gradient-to-b from-white via-purple-50/20 to-white relative overflow-hidden">
@@ -20,7 +36,7 @@ export default function Testimonials() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {testimonials.items.map((testimonial, index) => (
+          {testimonialItems.map((testimonial, index) => (
             <div
               key={index}
               className="group glass rounded-2xl p-8 border border-gray-200/50 hover:border-primary-purple/50 hover:shadow-glow-purple transition-all duration-500 bg-white/80 backdrop-blur-sm transform hover:-translate-y-2"
