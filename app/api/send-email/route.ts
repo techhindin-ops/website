@@ -14,6 +14,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // test adding space
     // Get email credentials
     const credentials = getEmailCredentials();
 
