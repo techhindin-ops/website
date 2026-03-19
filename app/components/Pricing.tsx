@@ -1,82 +1,110 @@
 "use client";
 
 import { Check, X } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { siteData } from "../data/siteData";
-import { useState } from "react";
+
+const includedCapabilities = [
+  "Purchasing",
+  "Inventory Management",
+  "B2B Trading",
+];
 
 const pricingPlans = [
   {
-    name: "Starter",
-    price: "₹9,999",
-    period: "per month",
-    description: "Perfect for small solar EPC companies getting started",
+    name: "Monthly Renewable",
+    billingCycle: "monthly",
+    monthlyPrice: 14999,
+    cycleMonths: 1,
+    userLimit: "Up to 200 users",
+    description: "Best for teams that prefer maximum billing flexibility.",
     features: [
-      "Up to 50 projects",
-      "Basic lead management",
-      "Project tracking",
-      "Email support",
-      "Mobile app access",
-      "Basic reporting",
+      ...includedCapabilities,
+      "Lead-to-project lifecycle management",
+      "Project tracking and task workflows",
+      "Mobile field access",
+      "Business reporting dashboard",
+      "Priority support",
     ],
-    limitations: [
-      "Limited integrations",
-      "No API access",
-    ],
+    limitations: [],
     popular: false,
     cta: "Get Started",
   },
   {
-    name: "Professional",
-    price: "₹19,999",
-    period: "per month",
-    description: "Ideal for growing solar businesses",
+    name: "Quarterly Renewable",
+    billingCycle: "quarterly",
+    monthlyPrice: 14499,
+    cycleMonths: 3,
+    userLimit: "Up to 200 users",
+    description: "Balanced pricing for teams planning a quarter ahead.",
     features: [
-      "Unlimited projects",
-      "Advanced lead management",
-      "Full project tracking",
-      "Priority email support",
-      "Mobile app access",
-      "Advanced reporting & analytics",
-      "Custom integrations",
-      "API access",
-      "Team collaboration tools",
+      ...includedCapabilities,
+      "Lead-to-project lifecycle management",
+      "Project tracking and task workflows",
+      "Mobile field access",
+      "Business reporting dashboard",
+      "Priority support",
+    ],
+    limitations: [],
+    popular: false,
+    cta: "Get Started",
+  },
+  {
+    name: "Half-Year Renewable",
+    billingCycle: "half-yearly",
+    monthlyPrice: 13999,
+    cycleMonths: 6,
+    userLimit: "Up to 200 users",
+    description: "Lower monthly cost with stronger half-year commitment.",
+    features: [
+      ...includedCapabilities,
+      "Lead-to-project lifecycle management",
+      "Project tracking and task workflows",
+      "Mobile field access",
+      "Business reporting dashboard",
+      "Priority support",
+    ],
+    limitations: [],
+    popular: false,
+    cta: "Get Started",
+  },
+  {
+    name: "Yearly Renewable",
+    billingCycle: "yearly",
+    monthlyPrice: 12999,
+    cycleMonths: 12,
+    userLimit: "Up to 200 users",
+    description: "Best value plan for long-term growth and planning.",
+    features: [
+      ...includedCapabilities,
+      "Lead-to-project lifecycle management",
+      "Project tracking and task workflows",
+      "Mobile field access",
+      "Business reporting dashboard",
+      "Priority support",
     ],
     limitations: [],
     popular: true,
     cta: "Get Started",
   },
-  {
-    name: "Enterprise",
-    price: "Custom",
-    period: "pricing",
-    description: "For large solar EPC companies with specific needs",
-    features: [
-      "Everything in Professional",
-      "Dedicated account manager",
-      "24/7 phone support",
-      "Custom feature development",
-      "On-premise deployment option",
-      "Advanced security & compliance",
-      "Training & onboarding",
-      "SLA guarantee",
-    ],
-    limitations: [],
-    popular: false,
-    cta: "Contact Sales",
-  },
 ];
 
 export default function Pricing() {
-  const [billingPeriod, setBillingPeriod] = useState<"monthly" | "yearly">("monthly");
+  const router = useRouter();
 
-  const getPrice = (plan: typeof pricingPlans[0]) => {
-    if (plan.name === "Enterprise") return plan.price;
-    if (billingPeriod === "yearly") {
-      const monthlyPrice = parseInt(plan.price.replace(/[₹,]/g, ""));
-      const yearlyPrice = monthlyPrice * 12 * 0.8; // 20% discount
-      return `₹${yearlyPrice.toLocaleString("en-IN")}`;
-    }
-    return plan.price;
+  const formatCurrency = (value: number) => {
+    return `₹${value.toLocaleString("en-IN")}`;
+  };
+
+  const handleGetStarted = (plan: (typeof pricingPlans)[number]) => {
+    const params = new URLSearchParams({
+      plan: plan.name,
+      monthly: formatCurrency(plan.monthlyPrice),
+      cycle: plan.billingCycle,
+      cycleTotal: formatCurrency(plan.monthlyPrice * plan.cycleMonths),
+      users: plan.userLimit,
+    });
+    router.push(`/?${params.toString()}#contact`);
   };
 
   return (
@@ -92,45 +120,25 @@ export default function Pricing() {
             Choose the perfect plan for your solar EPC business. All plans include
             our core features with no hidden fees.
           </p>
-
-          {/* Billing Toggle */}
-          <div className="flex items-center justify-center space-x-4">
-            <span
-              className={`text-base font-semibold ${
-                billingPeriod === "monthly" ? "text-dark-900" : "text-gray-500"
-              }`}
-            >
-              Monthly
+          <div className="inline-flex items-center justify-center rounded-full border border-[#00823b]/25 bg-[#00823b]/10 px-4 py-2">
+            <span className="text-sm font-semibold text-[#00662e]">
+              All plans are renewable, billed by selected cycle, plus applicable taxes.
             </span>
-            <button
-              onClick={() =>
-                setBillingPeriod(billingPeriod === "monthly" ? "yearly" : "monthly")
-              }
-              className="relative inline-flex h-7 w-14 items-center rounded-full bg-gradient-primary transition-all focus:outline-none focus:ring-2 focus:ring-primary-teal focus:ring-offset-2 shadow-soft"
-            >
+          </div>
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
+            {includedCapabilities.map((capability) => (
               <span
-                className={`inline-block h-5 w-5 transform rounded-full bg-white transition-transform duration-300 ${
-                  billingPeriod === "yearly" ? "translate-x-8" : "translate-x-1"
-                }`}
-              />
-            </button>
-            <span
-              className={`text-base font-semibold ${
-                billingPeriod === "yearly" ? "text-dark-900" : "text-gray-500"
-              }`}
-            >
-              Yearly
-            </span>
-            {billingPeriod === "yearly" && (
-              <span className="text-sm text-[#00823b] font-bold bg-[#00823b]/10 px-3 py-1.5 rounded-full">
-                Save 20%
+                key={capability}
+                className="inline-flex items-center rounded-full border border-[#1b365d]/20 bg-[#1b365d]/10 px-3 py-1 text-xs font-semibold text-[#1b365d]"
+              >
+                Included: {capability}
               </span>
-            )}
+            ))}
           </div>
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
@@ -153,11 +161,17 @@ export default function Pricing() {
                 <p className="text-gray-600 mb-6">{plan.description}</p>
                 <div className="mb-6">
                   <span className="text-5xl font-extrabold gradient-text">
-                    {getPrice(plan)}
+                    {formatCurrency(plan.monthlyPrice)}
                   </span>
-                  {plan.name !== "Enterprise" && (
-                    <span className="text-gray-600 ml-2 text-lg">/{billingPeriod === "monthly" ? "month" : "year"}</span>
-                  )}
+                  <span className="text-gray-600 ml-2 text-lg">+ tax / month</span>
+                </div>
+                <div className="rounded-xl bg-[#1b365d]/5 border border-[#1b365d]/15 px-3 py-2 mb-3">
+                  <p className="text-sm font-semibold text-[#1b365d]">
+                    Billed as {formatCurrency(plan.monthlyPrice * plan.cycleMonths)} every {plan.billingCycle}
+                  </p>
+                </div>
+                <div className="inline-flex items-center rounded-full border border-[#00823b]/25 bg-[#00823b]/10 px-3 py-1">
+                  <span className="text-xs font-bold text-[#00662e]">{plan.userLimit}</span>
                 </div>
               </div>
 
@@ -177,6 +191,8 @@ export default function Pricing() {
               </ul>
 
               <button
+                type="button"
+                onClick={() => handleGetStarted(plan)}
                 className="w-full py-4 rounded-xl font-bold text-lg transition-all duration-200 transform hover:scale-105 bg-[#00823b] hover:bg-[#00662e] text-white hover:shadow-glow"
               >
                 {plan.cta}

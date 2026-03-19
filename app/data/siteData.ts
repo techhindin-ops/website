@@ -36,11 +36,11 @@ export const siteData = {
   // Navigation
   navigation: {
     items: [
-      { name: "Product", hasDropdown: true },
-      { name: "Resources", hasDropdown: true },
-      { name: "Pricing", hasDropdown: true },
-      { name: "About Us", hasDropdown: true },
-      { name: "Contact Us", hasDropdown: true },
+      { name: "Product", hasDropdown: true, href: "#features" },
+      { name: "Resources", hasDropdown: true, href: "#faq" },
+      { name: "Pricing", hasDropdown: true, href: "/pricing" },
+      { name: "About Us", hasDropdown: true, href: "#about" },
+      { name: "Contact Us", hasDropdown: true, href: "#contact" },
     ],
     ctaButtons: {
       login: "Login",
@@ -68,6 +68,35 @@ export const siteData = {
       secondary: "Book a Demo",
     },
     featureHighlights: ["Residential", "Commercial", "Ground Mounted"],
+    kpis: [
+      { label: "Active Orders", value: "214", helper: "Live operations", trend: "up", status: "green" },
+      { label: "Project Value", value: "₹368.25L", helper: "Current pipeline", trend: "up", status: "blue" },
+      { label: "Active Capacity", value: "840.8 kW", helper: "Under execution", trend: "up", status: "teal" },
+      { label: "Completed Orders", value: "366", helper: "This cycle", trend: "neutral", status: "blue" },
+      { label: "Completed Capacity", value: "1522.6 kW", helper: "Commissioned", trend: "up", status: "green" },
+      { label: "Payment Outstanding", value: "143", helper: "Needs attention", trend: "down", status: "amber" },
+    ],
+    pipelinePreview: [
+      { stage: "Estimate", value: 93, tone: "success" },
+      { stage: "Planner", value: 45, tone: "info" },
+      { stage: "Delivery", value: 53, tone: "info" },
+      { stage: "Fabrication", value: 22, tone: "warning" },
+    ],
+    energyHighlights: [
+      { label: "Monthly Installed", value: "620 kW", tone: "green" },
+      { label: "Subsidy Pending", value: "5", tone: "amber" },
+      { label: "Netmeter Pending", value: "2", tone: "blue" },
+    ],
+    colorStops: {
+      meshA: "rgba(255,190,92,0.28)",
+      meshB: "rgba(0,130,59,0.22)",
+      meshC: "rgba(27,54,93,0.22)",
+    },
+    badges: [
+      "Startup-friendly onboarding",
+      "India-first workflow design",
+      "Field-ready operations"
+    ],
     trustIndicators: [
       { label: "14-day free trial" },
       { label: "No credit card" },
@@ -240,7 +269,7 @@ export const siteData = {
     ],
   },
 
-  // Testimonials
+  // Testimonials (kept for future enablement; currently hidden on homepage)
   testimonials: {
     title: "Trusted by Leading Solar EPC Companies Across India",
     description:
@@ -373,7 +402,7 @@ export const siteData = {
     ],
   },
 
-  // Social Proof
+  // Social Proof (kept for future enablement; currently hidden on homepage)
   socialProof: {
     title: "Trusted by Leading Solar Companies",
     logos: [

@@ -13,7 +13,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white via-slate-50/40 to-white relative overflow-hidden">
+    <section id="faq" className="scroll-mt-24 py-24 bg-gradient-to-b from-white via-slate-50/40 to-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(27,54,93,0.06),transparent_60%)]" />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">

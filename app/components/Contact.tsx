@@ -1,11 +1,12 @@
 "use client";
 
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { siteData } from "../data/siteData";
 
 export default function Contact() {
   const { contact, contactSection } = siteData;
+  const hasPrefilledRef = useRef(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -64,8 +65,42 @@ export default function Contact() {
     });
   };
 
+  useEffect(() => {
+    if (hasPrefilledRef.current) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const plan = params.get("plan");
+    const monthly = params.get("monthly");
+    const cycle = params.get("cycle");
+    const cycleTotal = params.get("cycleTotal");
+    const users = params.get("users");
+
+    if (!plan || !monthly || !cycle || !cycleTotal || !users) return;
+
+    setFormData((prev) => {
+      if (prev.message.trim().length > 0) return prev;
+
+      const prefilledMessage = [
+        "Hello techHind Team,",
+        "",
+        "I am interested in the following pricing plan:",
+        `Plan: ${plan}`,
+        `Monthly Price: ${monthly} + tax / month`,
+        `Billing Cycle: ${cycle}`,
+        `Cycle Total: ${cycleTotal}`,
+        `User Limit: ${users}`,
+        "",
+        "Please contact me with the next steps.",
+      ].join("\n");
+
+      return { ...prev, message: prefilledMessage };
+    });
+
+    hasPrefilledRef.current = true;
+  }, []);
+
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-white via-[#f8fafc] to-white relative overflow-hidden">
+    <section id="contact" className="scroll-mt-24 py-24 bg-gradient-to-b from-white via-[#f8fafc] to-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,102,46,0.1),transparent_50%)]"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">

@@ -3,12 +3,13 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { siteData } from "../data/siteData";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   const navItems = siteData.navigation.items;
   const { bookDemo } = siteData.navigation.ctaButtons;
@@ -28,21 +29,22 @@ export default function Header() {
     if (href.startsWith("#")) {
       // If on home page, scroll to section
       if (pathname === "/") {
-        setTimeout(() => {
-          try {
-            const element = document.querySelector(href);
-            if (element) {
-              element.scrollIntoView({ behavior: "smooth" });
-            }
-          } catch (error) {
-            console.warn("Invalid scroll target:", href);
+        try {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth", block: "start" });
           }
-        }, 100);
+        } catch (error) {
+          console.warn("Invalid scroll target:", href);
+        }
       } else {
         // Navigate to home page with hash
-        window.location.href = `/${href}`;
+        router.push(`/${href}`);
       }
+      return;
     }
+
+    router.push(href);
   };
 
   return (

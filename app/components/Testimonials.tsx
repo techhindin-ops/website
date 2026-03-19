@@ -1,4 +1,6 @@
 "use client";
+// This section is intentionally hidden from homepage for startup phase.
+// Keep this component and logic for quick future re-enable.
 
 import { Star, Quote } from "lucide-react";
 import { siteData } from "../data/siteData";
