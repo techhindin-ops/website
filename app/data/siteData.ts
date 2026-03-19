@@ -88,7 +88,7 @@ export const siteData = {
         title: "Solar-Specific CRM",
         description:
           "The only CRM built exclusively for Solar EPC businesses — not a generic tool retrofitted for solar.",
-        color: "from-amber-400 to-orange-500",
+        color: "from-[#00823b] to-[#1b365d]",
       },
       {
         icon: "🔄",
@@ -96,7 +96,7 @@ export const siteData = {
         title: "Complete Workflow",
         description:
           "From first lead to final commissioning, handle every stage in one unified platform.",
-        color: "from-teal-400 to-cyan-500",
+        color: "from-[#00823b] to-[#1b365d]",
       },
       {
         icon: "📱",
@@ -104,7 +104,7 @@ export const siteData = {
         title: "Field Team Ready",
         description:
           "Your site teams can capture surveys, photos, and updates directly from the field — even offline.",
-        color: "from-indigo-400 to-purple-500",
+        color: "from-[#00823b] to-[#1b365d]",
       },
     ],
   },
@@ -211,7 +211,7 @@ export const siteData = {
         title: "Lead Capture",
         description:
           "Capture inquiries from website, calls, WhatsApp, and referrals. Auto-assign to sales reps with follow-up reminders.",
-        color: "from-amber-400 to-orange-500",
+        color: "from-[#00823b] to-[#1b365d]",
       },
       {
         number: "02",
@@ -219,7 +219,7 @@ export const siteData = {
         title: "Survey & Quotation",
         description:
           "Schedule site surveys, capture rooftop measurements, and generate professional GST-ready solar proposals in minutes.",
-        color: "from-teal-400 to-cyan-500",
+        color: "from-[#00823b] to-[#1b365d]",
       },
       {
         number: "03",
@@ -227,7 +227,7 @@ export const siteData = {
         title: "Project Execution",
         description:
           "Manage procurement, inventory allocation, installation stages, and field team tasks with real-time progress tracking.",
-        color: "from-indigo-400 to-purple-500",
+        color: "from-[#00823b] to-[#1b365d]",
       },
       {
         number: "04",
@@ -235,7 +235,7 @@ export const siteData = {
         title: "Commissioning & After-Sales",
         description:
           "Complete commissioning checklists, handle DISCOM approvals, and manage AMC/service contracts for ongoing revenue.",
-        color: "from-emerald-400 to-green-500",
+        color: "from-[#00823b] to-[#1b365d]",
       },
     ],
   },

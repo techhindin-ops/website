@@ -14,12 +14,12 @@ export default function FAQ() {
 
   return (
     <section className="py-24 bg-gradient-to-b from-white via-slate-50/40 to-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(99,102,241,0.06),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(27,54,93,0.06),transparent_60%)]" />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-50 border border-indigo-200 mb-6">
-            <HelpCircle className="h-4 w-4 text-indigo-500" />
-            <span className="text-sm font-bold text-indigo-600">Got Questions?</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#1b365d]/10 border border-[#1b365d]/20 mb-6">
+            <HelpCircle className="h-4 w-4 text-[#1b365d]" />
+            <span className="text-sm font-bold text-[#1b365d]">Got Questions?</span>
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6">
             {faq.title}
@@ -35,8 +35,8 @@ export default function FAQ() {
               key={index}
               className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                 openIndex === index
-                  ? "border-indigo-200 bg-indigo-50/60 shadow-lg shadow-indigo-100"
-                  : "border-gray-200/70 bg-white hover:border-indigo-200 hover:shadow-md"
+                  ? "border-[#1b365d]/20 bg-[#1b365d]/10 shadow-lg shadow-[#1b365d]/10"
+                  : "border-gray-200/70 bg-white hover:border-[#1b365d]/30 hover:shadow-md"
               }`}
             >
               <button
@@ -45,7 +45,7 @@ export default function FAQ() {
               >
                 <span
                   className={`font-semibold text-base sm:text-lg transition-colors ${
-                    openIndex === index ? "text-indigo-700" : "text-slate-800"
+                    openIndex === index ? "text-[#1b365d]" : "text-slate-800"
                   }`}
                 >
                   {item.question}
@@ -53,7 +53,7 @@ export default function FAQ() {
                 <ChevronDown
                   className={`h-5 w-5 flex-shrink-0 transition-all duration-300 ${
                     openIndex === index
-                      ? "rotate-180 text-indigo-500"
+                      ? "rotate-180 text-[#1b365d]"
                       : "text-slate-400"
                   }`}
                 />
@@ -66,7 +66,7 @@ export default function FAQ() {
                 }`}
               >
                 <div className="px-6 pb-6">
-                  <div className="h-px bg-indigo-200/60 mb-4" />
+                  <div className="h-px bg-[#1b365d]/20 mb-4" />
                   <p className="text-gray-600 leading-relaxed">{item.answer}</p>
                 </div>
               </div>
@@ -76,7 +76,7 @@ export default function FAQ() {
 
         {/* Still have questions CTA */}
         <div className="mt-16 text-center">
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-gradient-to-r from-teal-50 to-indigo-50 border border-indigo-200/60 rounded-3xl px-8 py-6">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-[#f8fafc] border border-[#1b365d]/20 rounded-3xl px-8 py-6">
             <div className="text-left">
               <p className="font-bold text-slate-800 text-lg">Still have questions?</p>
               <p className="text-gray-500 text-sm">Our team is happy to help. Reach out anytime.</p>
@@ -86,7 +86,7 @@ export default function FAQ() {
                 const element = document.querySelector("#contact");
                 if (element) element.scrollIntoView({ behavior: "smooth" });
               }}
-              className="px-6 py-3 bg-gradient-to-r from-teal-500 to-indigo-600 text-white rounded-xl font-bold hover:shadow-lg hover:shadow-teal-500/25 transition-all duration-300 transform hover:scale-105 whitespace-nowrap"
+              className="px-6 py-3 bg-[#00823b] hover:bg-[#00662e] text-white rounded-xl font-bold hover:shadow-glow transition-all duration-200 transform hover:scale-105 whitespace-nowrap"
             >
               Contact Us →
             </button>

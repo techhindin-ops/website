@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getEmailCredentials } from "@/app/config/emailCredentials";
+import { sendEmail } from "@/app/services/email.service";
 
 export async function POST(request: NextRequest) {
   try {
@@ -14,7 +15,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // test adding space
     // Get email credentials
     const credentials = getEmailCredentials();
 
@@ -38,56 +38,32 @@ export async function POST(request: NextRequest) {
       `,
     };
 
-    // Send email based on service type
-    if (credentials.service === "sendgrid" && credentials.apiKey) {
-      // SendGrid API
-      const response = await fetch("https://api.sendgrid.com/v3/mail/send", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${credentials.apiKey}`,
-        },
-        body: JSON.stringify({
-          personalizations: [
-            {
-              to: [{ email: credentials.toEmail }],
-            },
-          ],
-          from: { email: credentials.fromEmail },
-          subject: emailContent.subject,
-          content: [
-            {
-              type: "text/html",
-              value: emailContent.html,
-            },
-          ],
-        }),
-      });
-
-      if (response.ok) {
-        return NextResponse.json(
-          { success: true, message: "Email sent successfully! We'll get back to you soon." },
-          { status: 200 }
-        );
-      }
+    if (credentials.service !== "brevo") {
+      return NextResponse.json(
+        { error: "Unsupported email service. Set EMAIL_SERVICE=brevo." },
+        { status: 500 }
+      );
     }
 
-    // Fallback: Log email (for development or if service not configured)
-    console.log("=== Contact Form Submission ===");
-    console.log("From:", email);
-    console.log("Name:", name);
-    console.log("Message:", message);
-    console.log("Email would be sent to:", credentials.toEmail);
-    console.log("==============================");
+    if (!credentials.brevoUser || !credentials.brevoMasterKey || !credentials.fromEmail || !credentials.toEmail) {
+      return NextResponse.json(
+        {
+          error:
+            "Email service is not configured. Set BREVO_USER, BREVO_MASTER_KEY, BREVO_FROM and BREVO_TO in .env.local.",
+        },
+        { status: 503 }
+      );
+    }
 
-    // Return success even if email service is not configured
-    // In production, you should configure a proper email service
+    await sendEmail(
+      emailContent.to,
+      emailContent.subject,
+      emailContent.text,
+      emailContent.html
+    );
+
     return NextResponse.json(
-      { 
-        success: true, 
-        message: "Thank you for your message! We'll get back to you soon.",
-        note: credentials.apiKey ? "" : "Note: Email service not fully configured. Please configure EMAIL_API_KEY in .env.local"
-      },
+      { success: true, message: "Email sent successfully! We'll get back to you soon." },
       { status: 200 }
     );
   } catch (error) {

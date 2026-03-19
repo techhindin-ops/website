@@ -43,13 +43,13 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-br from-slate-50 via-white to-cyan-50/20">
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-gradient-to-br from-white via-[#f8fafc] to-white">
       {/* Dynamic Animated Background */}
       <div 
         className="absolute inset-0 opacity-30 transition-opacity duration-1000"
         style={{
-          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(20,184,166,0.15), transparent 50%),
-                      radial-gradient(circle at ${100 - mousePosition.x}% ${100 - mousePosition.y}%, rgba(139,92,246,0.1), transparent 50%)`,
+          background: `radial-gradient(circle at ${mousePosition.x}% ${mousePosition.y}%, rgba(0,130,59,0.15), transparent 50%),
+                      radial-gradient(circle at ${100 - mousePosition.x}% ${100 - mousePosition.y}%, rgba(27,54,93,0.1), transparent 50%)`,
         }}
       />
       
@@ -58,8 +58,8 @@ export default function Hero() {
         <div 
           className="absolute inset-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(20,184,166,0.1) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(20,184,166,0.1) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(0,130,59,0.1) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0,130,59,0.1) 1px, transparent 1px)`,
             backgroundSize: '50px 50px',
           }}
         />
@@ -116,13 +116,12 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <button
                 onClick={handleCTAClick}
-                className="group relative px-8 py-4 bg-gradient-primary text-white rounded-2xl font-bold text-lg overflow-hidden transition-all duration-300 hover:shadow-glow transform hover:scale-105"
+                className="group px-8 py-4 bg-[#00823b] hover:bg-[#00662e] text-white rounded-2xl font-bold text-lg transition-all duration-200 hover:shadow-glow transform hover:scale-105"
               >
-                <span className="relative z-10 flex items-center justify-center gap-2">
+                <span className="flex items-center justify-center gap-2">
                   {ctaButtons.primary}
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-teal via-primary-indigo to-primary-purple opacity-0 group-hover:opacity-100 transition-opacity" />
               </button>
               <button
                 onClick={handleCTAClick}

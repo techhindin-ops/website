@@ -44,7 +44,7 @@ function StatItem({ value, suffix, label, icon: Icon, started }: StatItemProps) 
       <div className="relative inline-flex items-center justify-center mb-6">
         {/* Outer glow ring */}
         <div className="absolute inset-0 bg-gradient-primary rounded-3xl opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500 scale-125" />
-        <div className="relative w-20 h-20 bg-gradient-to-br from-teal-400 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
+        <div className="relative w-20 h-20 bg-gradient-to-br from-[#00823b] to-[#1b365d] rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
           <Icon className="h-10 w-10 text-white" />
         </div>
       </div>
@@ -78,9 +78,9 @@ export default function Stats() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-[#0b1c33] via-[#1b365d] to-[#0b1c33] relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(20,184,166,0.15),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,130,59,0.15),transparent_70%)]" />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">

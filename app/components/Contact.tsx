@@ -65,8 +65,8 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-b from-cyan-50/30 via-white to-slate-50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.1),transparent_50%)]"></div>
+    <section id="contact" className="py-24 bg-gradient-to-b from-white via-[#f8fafc] to-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,102,46,0.1),transparent_50%)]"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
@@ -97,7 +97,7 @@ export default function Contact() {
               </h3>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4 group">
-                  <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0 shadow-soft group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#00823b] to-[#1b365d] rounded-xl flex items-center justify-center flex-shrink-0 shadow-soft group-hover:scale-110 transition-transform">
                     <Mail className="h-7 w-7 text-white" />
                   </div>
                   <div>
@@ -109,7 +109,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4 group">
-                  <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0 shadow-soft group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#00823b] to-[#1b365d] rounded-xl flex items-center justify-center flex-shrink-0 shadow-soft group-hover:scale-110 transition-transform">
                     <Phone className="h-7 w-7 text-white" />
                   </div>
                   <div>
@@ -121,7 +121,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4 group">
-                  <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center flex-shrink-0 shadow-soft group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#00823b] to-[#1b365d] rounded-xl flex items-center justify-center flex-shrink-0 shadow-soft group-hover:scale-110 transition-transform">
                     <MapPin className="h-7 w-7 text-white" />
                   </div>
                   <div>
@@ -140,7 +140,7 @@ export default function Contact() {
                     href={contact.socialMedia.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center hover:shadow-glow transition-all transform hover:scale-110"
+                    className="w-12 h-12 bg-gradient-to-br from-[#00823b] to-[#1b365d] rounded-xl flex items-center justify-center hover:shadow-glow transition-all transform hover:scale-110"
                     aria-label="LinkedIn"
                   >
                     <span className="text-white font-bold">in</span>
@@ -149,7 +149,7 @@ export default function Contact() {
                     href={contact.socialMedia.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center hover:shadow-glow transition-all transform hover:scale-110"
+                    className="w-12 h-12 bg-gradient-to-br from-[#00823b] to-[#1b365d] rounded-xl flex items-center justify-center hover:shadow-glow transition-all transform hover:scale-110"
                     aria-label="Twitter"
                   >
                     <span className="text-white font-bold">X</span>
@@ -158,7 +158,7 @@ export default function Contact() {
                     href={contact.socialMedia.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center hover:shadow-glow transition-all transform hover:scale-110"
+                    className="w-12 h-12 bg-gradient-to-br from-[#00823b] to-[#1b365d] rounded-xl flex items-center justify-center hover:shadow-glow transition-all transform hover:scale-110"
                     aria-label="Facebook"
                   >
                     <span className="text-white font-bold">f</span>
@@ -222,7 +222,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00823b] focus:border-[#00823b] outline-none transition-all resize-none"
                     placeholder="Your message..."
                   />
                 </div>
@@ -242,7 +242,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-8 py-4 bg-gradient-primary text-white rounded-xl hover:shadow-glow transition-all duration-300 font-bold text-lg flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 disabled:transform-none"
+                  className="w-full px-8 py-4 bg-[#00823b] hover:bg-[#00662e] text-white rounded-xl hover:shadow-glow transition-all duration-200 font-bold text-lg flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 disabled:transform-none"
                 >
                   {isSubmitting ? (
                     <>

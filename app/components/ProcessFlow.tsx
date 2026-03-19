@@ -6,15 +6,15 @@ export default function ProcessFlow() {
   const { processFlow } = siteData;
 
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <section className="py-24 bg-gradient-to-b from-[#0b1c33] via-[#1b365d] to-[#0b1c33] relative overflow-hidden">
       {/* Background glows */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(20,184,166,0.12),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(139,92,246,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(0,130,59,0.12),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_50%,rgba(0,130,59,0.08),transparent_50%)]" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
-            <span className="text-sm font-bold text-teal-300">🔄 End-to-End Workflow</span>
+            <span className="text-sm font-bold text-white/80">🔄 End-to-End Workflow</span>
           </div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6">
             {processFlow.title}
@@ -27,7 +27,7 @@ export default function ProcessFlow() {
         {/* Steps — Desktop: horizontal, Mobile: vertical */}
         <div className="relative max-w-6xl mx-auto">
           {/* Connector line (desktop only) */}
-          <div className="hidden lg:block absolute top-[60px] left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-amber-400 via-teal-400 via-indigo-400 to-emerald-400 opacity-40" />
+          <div className="hidden lg:block absolute top-[60px] left-[12.5%] right-[12.5%] h-0.5 bg-white/20" />
 
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-6">
             {processFlow.steps.map((step, index) => (
@@ -75,7 +75,7 @@ export default function ProcessFlow() {
                 const element = document.querySelector("#contact");
                 if (element) element.scrollIntoView({ behavior: "smooth" });
               }}
-              className="px-10 py-4 bg-gradient-to-r from-teal-500 via-indigo-500 to-purple-600 text-white rounded-2xl hover:shadow-xl hover:shadow-teal-500/25 transition-all duration-300 font-bold text-lg transform hover:scale-105"
+              className="px-10 py-4 bg-[#00823b] hover:bg-[#00662e] text-white rounded-2xl hover:shadow-glow transition-all duration-200 font-bold text-lg transform hover:scale-105"
             >
               Start Your Free Trial
             </button>

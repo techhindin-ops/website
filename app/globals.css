@@ -4,10 +4,13 @@
 
 @layer base {
   :root {
-    --primary-teal: #14b8a6;
-    --primary-cyan: #06b6d4;
-    --primary-purple: #8b5cf6;
-    --primary-indigo: #6366f1;
+    --primary-teal: #00823b;
+    --primary-cyan: #00662e;
+    --primary-purple: #f37021;
+    --primary-indigo: #1b365d;
+    --brand-dark-hover: #142847;
+    --brand-dark-border: #0f1f3a;
+    --brand-dark-mid: #2d4e7a;
   }
 
   * {
@@ -35,7 +38,15 @@
   }
 
   .gradient-text {
-    background: linear-gradient(to right, #14b8a6, #6366f1, #8b5cf6);
+    background: linear-gradient(to right, #00823b, #1b365d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .gradient-text-brand {
+    background: linear-gradient(to right, #00823b, #1b365d, #f37021);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -57,12 +68,12 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #14b8a6 0%, #6366f1 50%, #8b5cf6 100%);
+    background: linear-gradient(135deg, #00823b 0%, #1b365d 50%, #f37021 100%);
     border-radius: 5px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #0d9488 0%, #4f46e5 50%, #7c3aed 100%);
+    background: linear-gradient(135deg, #00662e 0%, #162c4a 50%, #d95d16 100%);
   }
 
   /* Fade in animation */
@@ -135,16 +146,16 @@
 
   /* === NEW: Gradient primary utility (referenced by some components) === */
   .bg-gradient-primary {
-    background: linear-gradient(135deg, #14b8a6 0%, #6366f1 50%, #8b5cf6 100%);
+    background: linear-gradient(135deg, #00823b 0%, #1b365d 50%, #f37021 100%);
   }
 
   /* === Glow shadows === */
   .shadow-glow {
-    box-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
+    box-shadow: 0 0 20px rgba(0, 130, 59, 0.3);
   }
 
   .shadow-glow-purple {
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    box-shadow: 0 0 20px rgba(243, 112, 33, 0.3);
   }
 
   .shadow-soft {

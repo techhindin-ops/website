@@ -44,14 +44,14 @@ export default function Features() {
             return (
               <div
                 key={index}
-                className="group relative p-7 rounded-2xl glass border border-gray-200/50 hover:border-teal-400/50 hover:shadow-xl hover:shadow-teal-500/10 transition-all duration-500 bg-white/80 backdrop-blur-sm transform hover:-translate-y-2"
+                className="group relative p-7 rounded-2xl glass border border-gray-200/50 hover:border-[#00823b]/30 hover:shadow-xl hover:shadow-[#00823b]/10 transition-all duration-500 bg-white/80 backdrop-blur-sm transform hover:-translate-y-2"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-[#00823b]/3 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500" />
                 <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-indigo-600 rounded-xl flex items-center justify-center mb-5 shadow-md group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#00823b] to-[#1b365d] rounded-xl flex items-center justify-center mb-5 shadow-md group-hover:scale-110 transition-transform duration-300">
                     <Icon className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-teal-600 transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#00823b] transition-colors">
                     {feature.title}
                   </h3>
                   <p className="text-gray-500 text-sm leading-relaxed mb-4">
@@ -61,7 +61,7 @@ export default function Features() {
                   <ul className="space-y-1.5">
                     {feature.subFeatures.map((sub, subIndex) => (
                       <li key={subIndex} className="flex items-center gap-2 text-xs text-gray-500">
-                        <CheckCircle2 className="h-3.5 w-3.5 text-teal-500 flex-shrink-0" />
+                        <CheckCircle2 className="h-3.5 w-3.5 text-[#00823b] flex-shrink-0" />
                         <span>{sub}</span>
                       </li>
                     ))}
@@ -82,7 +82,7 @@ export default function Features() {
               const element = document.querySelector("#contact");
               if (element) element.scrollIntoView({ behavior: "smooth" });
             }}
-            className="px-10 py-4 bg-gradient-to-r from-teal-500 via-indigo-500 to-purple-600 text-white rounded-2xl hover:shadow-xl hover:shadow-teal-500/25 transition-all duration-300 font-bold text-lg transform hover:scale-105"
+            className="px-10 py-4 bg-[#00823b] hover:bg-[#00662e] text-white rounded-2xl hover:shadow-glow transition-all duration-200 font-bold text-lg transform hover:scale-105"
           >
             Start Free Trial
           </button>

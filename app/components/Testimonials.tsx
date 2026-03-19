@@ -14,9 +14,9 @@ interface Testimonial {
 }
 
 const gradients = [
-  "from-teal-400 to-cyan-500",
-  "from-indigo-400 to-purple-500",
-  "from-amber-400 to-orange-500",
+  "from-[#1b365d] to-[#0b1c33]",
+  "from-[#1b365d] to-[#0b1c33]",
+  "from-[#1b365d] to-[#0b1c33]",
 ];
 
 export default function Testimonials() {
@@ -29,8 +29,8 @@ export default function Testimonials() {
   const testimonialItems = testimonials.items as Testimonial[];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white via-purple-50/20 to-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]" />
+    <section className="py-24 bg-gradient-to-b from-white via-[#f8fafc] to-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,130,59,0.06),transparent_50%)]" />
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-20">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6">
@@ -45,12 +45,12 @@ export default function Testimonials() {
           {testimonialItems.map((testimonial, index) => (
             <div
               key={index}
-              className="group glass rounded-2xl p-8 border border-gray-200/50 hover:border-purple-400/50 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-500 bg-white/80 backdrop-blur-sm transform hover:-translate-y-2 flex flex-col"
+              className="group glass rounded-2xl p-8 border border-gray-200/50 hover:border-[#1b365d]/30 hover:shadow-xl hover:shadow-[#1b365d]/10 transition-all duration-500 bg-white/80 backdrop-blur-sm transform hover:-translate-y-2 flex flex-col"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               {/* Quote icon */}
               <div className="flex items-center justify-between mb-6">
-                <Quote className="h-8 w-8 text-purple-300 group-hover:text-purple-400 transition-colors" />
+                <Quote className="h-8 w-8 text-[#1b365d]/60 group-hover:text-[#1b365d] transition-colors" />
                 {/* Location badge */}
                 <span className="text-xs text-gray-400 bg-gray-100 px-3 py-1 rounded-full">
                   📍 {testimonial.location}
@@ -60,7 +60,7 @@ export default function Testimonials() {
               {/* Stars */}
               <div className="flex mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 text-amber-400 fill-amber-400" />
+                  <Star key={i} className="h-4 w-4 text-[#f37021] fill-[#f37021]" />
                 ))}
               </div>
 

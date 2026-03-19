@@ -73,25 +73,28 @@ contact: {
 
 To enable contact form email sending:
 
-1. Copy `.env.local.example` to `.env.local`:
-```bash
-cp .env.local.example .env.local
-```
+1. Create a `.env.local` file in the project root.
 
-2. Update `.env.local` with your email service credentials:
+2. Update `.env.local` with Brevo credentials:
 ```env
-EMAIL_SERVICE=sendgrid
-EMAIL_FROM=noreply@techhind.com
-EMAIL_TO=contact@techhind.com
-EMAIL_API_KEY=your_sendgrid_api_key_here
+EMAIL_SERVICE=brevo
+BREVO_FROM=noreply@techhind.com
+BREVO_TO=contact@techhind.com
+BREVO_USER=your_brevo_login_email
+BREVO_MASTER_KEY=your_brevo_master_key
+# Optional (not required for SMTP flow):
+BREVO_API_KEY=your_brevo_api_key_here
 ```
 
-3. For SendGrid:
-   - Sign up at https://sendgrid.com
-   - Create an API key at https://app.sendgrid.com/settings/api_keys
-   - Add the API key to `.env.local`
+3. For Brevo:
+   - Sign up at https://www.brevo.com
+   - Go to Brevo Dashboard -> SMTP & API
+   - Use SMTP credentials for `BREVO_USER` and `BREVO_MASTER_KEY`
+   - Set sender as `BREVO_FROM` and destination inbox as `BREVO_TO`
 
-**Note**: The contact form will work even without email configuration - it will log submissions to the console for development purposes.
+4. Ensure all required SMTP vars are set: `BREVO_USER`, `BREVO_MASTER_KEY`, `BREVO_FROM`, `BREVO_TO`.
+
+Note: Website contact form now uses Brevo SMTP relay (same pattern as platform backend).
 
 ### Add Your Logo
 

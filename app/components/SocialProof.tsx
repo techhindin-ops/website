@@ -28,10 +28,10 @@ export default function SocialProof() {
           {doubled.map((logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 flex items-center justify-center h-16 px-6 bg-gradient-to-br from-slate-50 to-white border border-gray-200/70 rounded-2xl shadow-sm hover:border-teal-300 hover:shadow-md transition-all duration-300 group min-w-[160px]"
+              className="flex-shrink-0 flex items-center justify-center h-16 px-6 bg-gradient-to-br from-slate-50 to-white border border-gray-200/70 rounded-2xl shadow-sm hover:border-[#00823b]/40 hover:shadow-md transition-all duration-300 group min-w-[160px]"
             >
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-teal-500 to-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div className="w-8 h-8 bg-gradient-to-br from-[#00823b] to-[#1b365d] rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <span className="text-white font-bold text-xs">{logo.placeholder.slice(0, 2)}</span>
                 </div>
                 <span className="text-slate-700 font-semibold text-sm whitespace-nowrap">

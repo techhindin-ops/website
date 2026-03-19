@@ -28,11 +28,11 @@ export default function Highlights() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden"
+      className="py-20 bg-gradient-to-br from-[#0b1c33] via-[#1b365d] to-[#0b1c33] relative overflow-hidden"
     >
       {/* Background accents */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(20,184,166,0.12),transparent_60%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(139,92,246,0.1),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(0,130,59,0.12),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(0,130,59,0.08),transparent_60%)]" />
 
       {/* Subtle grid */}
       <div
@@ -79,7 +79,7 @@ export default function Highlights() {
                 {item.stat}
               </div>
 
-              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-teal-300 transition-colors">
+              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-white transition-colors">
                 {item.title}
               </h3>
               <p className="text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">

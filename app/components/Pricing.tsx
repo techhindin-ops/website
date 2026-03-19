@@ -80,8 +80,8 @@ export default function Pricing() {
   };
 
   return (
-    <section className="pt-20 pb-24 bg-gradient-to-b from-slate-50 via-white to-cyan-50/30 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(20,184,166,0.08),transparent_50%)]"></div>
+    <section className="pt-20 pb-24 bg-gradient-to-b from-[#f8fafc] via-white to-[#f8fafc] relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(0,130,59,0.08),transparent_50%)]"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
@@ -122,7 +122,7 @@ export default function Pricing() {
               Yearly
             </span>
             {billingPeriod === "yearly" && (
-              <span className="text-sm text-accent-emerald font-bold bg-emerald-100 px-3 py-1.5 rounded-full">
+              <span className="text-sm text-[#00823b] font-bold bg-[#00823b]/10 px-3 py-1.5 rounded-full">
                 Save 20%
               </span>
             )}
@@ -136,13 +136,13 @@ export default function Pricing() {
               key={index}
               className={`group relative glass rounded-3xl shadow-soft p-10 ${
                 plan.popular
-                  ? "border-2 border-primary-purple/50 transform scale-105 hover:shadow-glow-purple"
-                  : "border border-gray-200/50 hover:border-primary-teal/50"
+                  ? "border-2 border-[#00823b]/60 transform scale-105 hover:shadow-glow"
+                  : "border border-gray-200/50 hover:border-[#00823b]/40"
               } transition-all duration-500 bg-white/90 backdrop-blur-sm hover:-translate-y-2`}
             >
               {plan.popular && (
                 <div className="absolute -top-5 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-primary text-white px-5 py-2 rounded-full text-sm font-bold shadow-glow">
+                  <span className="bg-[#00823b] text-white px-5 py-2 rounded-full text-sm font-bold shadow-glow">
                     Most Popular
                   </span>
                 </div>
@@ -164,7 +164,7 @@ export default function Pricing() {
               <ul className="space-y-4 mb-10">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start">
-                    <Check className="h-6 w-6 text-accent-emerald mr-3 flex-shrink-0 mt-0.5" />
+                    <Check className="h-6 w-6 text-[#00823b] mr-3 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -177,11 +177,7 @@ export default function Pricing() {
               </ul>
 
               <button
-                className={`w-full py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 ${
-                  plan.popular
-                    ? "bg-gradient-primary text-white hover:shadow-glow"
-                    : "bg-gradient-primary text-white hover:shadow-glow"
-                }`}
+                className="w-full py-4 rounded-xl font-bold text-lg transition-all duration-200 transform hover:scale-105 bg-[#00823b] hover:bg-[#00662e] text-white hover:shadow-glow"
               >
                 {plan.cta}
               </button>
@@ -195,7 +191,7 @@ export default function Pricing() {
             Frequently Asked Questions
           </h2>
           <div className="space-y-6">
-            <div className="glass rounded-2xl p-8 shadow-soft border border-gray-200/50 bg-white/80 backdrop-blur-sm hover:border-primary-teal/50 transition-all">
+            <div className="glass rounded-2xl p-8 shadow-soft border border-gray-200/50 bg-white/80 backdrop-blur-sm hover:border-[#00823b]/40 transition-all">
               <h3 className="text-xl font-bold text-dark-900 mb-3">
                 Can I change plans later?
               </h3>
@@ -204,7 +200,7 @@ export default function Pricing() {
                 will be reflected in your next billing cycle.
               </p>
             </div>
-            <div className="glass rounded-2xl p-8 shadow-soft border border-gray-200/50 bg-white/80 backdrop-blur-sm hover:border-primary-teal/50 transition-all">
+            <div className="glass rounded-2xl p-8 shadow-soft border border-gray-200/50 bg-white/80 backdrop-blur-sm hover:border-[#00823b]/40 transition-all">
               <h3 className="text-xl font-bold text-dark-900 mb-3">
                 Is there a free trial?
               </h3>
@@ -213,7 +209,7 @@ export default function Pricing() {
                 required to start.
               </p>
             </div>
-            <div className="glass rounded-2xl p-8 shadow-soft border border-gray-200/50 bg-white/80 backdrop-blur-sm hover:border-primary-teal/50 transition-all">
+            <div className="glass rounded-2xl p-8 shadow-soft border border-gray-200/50 bg-white/80 backdrop-blur-sm hover:border-[#00823b]/40 transition-all">
               <h3 className="text-xl font-bold text-dark-900 mb-3">
                 What payment methods do you accept?
               </h3>
