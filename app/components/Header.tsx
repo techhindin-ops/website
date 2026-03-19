@@ -15,13 +15,27 @@ export default function Header() {
 
   const handleNavClick = (href: string) => {
     setMobileMenuOpen(false);
+    
+    if (href === "#") {
+      if (pathname === "/") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        window.location.href = "/";
+      }
+      return;
+    }
+
     if (href.startsWith("#")) {
       // If on home page, scroll to section
       if (pathname === "/") {
         setTimeout(() => {
-          const element = document.querySelector(href);
-          if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
+          try {
+            const element = document.querySelector(href);
+            if (element) {
+              element.scrollIntoView({ behavior: "smooth" });
+            }
+          } catch (error) {
+            console.warn("Invalid scroll target:", href);
           }
         }, 100);
       } else {

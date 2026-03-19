@@ -73,7 +73,7 @@
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0);;
     }
   }
 
@@ -108,5 +108,46 @@
     animation: bounce-slow-delayed 3s ease-in-out infinite;
     animation-delay: 1.5s;
   }
-}
 
+  /* === NEW: Infinite Marquee === */
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 28s linear infinite;
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  /* === NEW: Scroll-triggered entrance === */
+  .highlight-card.animate-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+
+  /* === NEW: Gradient primary utility (referenced by some components) === */
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, #14b8a6 0%, #6366f1 50%, #8b5cf6 100%);
+  }
+
+  /* === Glow shadows === */
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
+  }
+
+  .shadow-glow-purple {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+
+  .shadow-soft {
+    box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+  }
+}

@@ -7,54 +7,29 @@ import {
   FileText,
   BarChart3,
   Shield,
+  Smartphone,
+  Headphones,
+  CheckCircle2,
 } from "lucide-react";
 import { siteData } from "../data/siteData";
 
-const features = [
-  {
-    icon: Users,
-    title: "Lead Management",
-    description:
-      "Capture, track, and nurture leads from multiple sources with automated workflows and intelligent scoring.",
-  },
-  {
-    icon: FolderKanban,
-    title: "Project Tracking",
-    description:
-      "Monitor project progress in real-time with visual dashboards, timelines, and milestone tracking.",
-  },
-  {
-    icon: Package,
-    title: "Inventory Management",
-    description:
-      "Keep track of solar panels, inverters, and components with real-time inventory updates and alerts.",
-  },
-  {
-    icon: FileText,
-    title: "Document Management",
-    description:
-      "Centralized document storage for contracts, permits, designs, and compliance documents.",
-  },
-  {
-    icon: BarChart3,
-    title: "Analytics & Reports",
-    description:
-      "Comprehensive insights into sales performance, project profitability, and business metrics.",
-  },
-  {
-    icon: Shield,
-    title: "Compliance & Quality",
-    description:
-      "Ensure regulatory compliance and maintain quality standards throughout your projects.",
-  },
-];
+const iconMap: Record<string, React.ElementType> = {
+  Users,
+  FolderKanban,
+  Package,
+  FileText,
+  BarChart3,
+  Shield,
+  Smartphone,
+  Headphones,
+};
 
 export default function Features() {
   return (
     <section id="features" className="py-24 bg-gradient-to-b from-white via-slate-50/50 to-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-dark-900 mb-6">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 mb-6">
             {siteData.features.title.split(siteData.features.titleHighlight)[0]}
             <span className="gradient-text">{siteData.features.titleHighlight}</span>
           </h2>
@@ -63,42 +38,51 @@ export default function Features() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => {
-            const Icon = feature.icon;
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {siteData.features.items.map((feature, index) => {
+            const Icon = iconMap[feature.icon] || Users;
             return (
               <div
                 key={index}
-                className="group relative p-8 rounded-2xl glass border border-gray-200/50 hover:border-primary-teal/50 hover:shadow-glow transition-all duration-500 bg-white/80 backdrop-blur-sm transform hover:-translate-y-2"
+                className="group relative p-7 rounded-2xl glass border border-gray-200/50 hover:border-teal-400/50 hover:shadow-xl hover:shadow-teal-500/10 transition-all duration-500 bg-white/80 backdrop-blur-sm transform hover:-translate-y-2"
               >
-                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-500" />
                 <div className="relative">
-                  <div className="w-14 h-14 bg-gradient-primary rounded-2xl flex items-center justify-center mb-6 shadow-soft group-hover:scale-110 transition-transform duration-300">
-                    <Icon className="h-7 w-7 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-teal-400 to-indigo-600 rounded-xl flex items-center justify-center mb-5 shadow-md group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-dark-900 mb-3 group-hover:text-primary-teal transition-colors">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-teal-600 transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">
                     {feature.description}
                   </p>
+                  {/* Sub-features */}
+                  <ul className="space-y-1.5">
+                    {feature.subFeatures.map((sub, subIndex) => (
+                      <li key={subIndex} className="flex items-center gap-2 text-xs text-gray-500">
+                        <CheckCircle2 className="h-3.5 w-3.5 text-teal-500 flex-shrink-0" />
+                        <span>{sub}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
             );
           })}
         </div>
-        
+
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <p className="text-lg text-gray-600 mb-6">
             Ready to transform your solar business operations?
           </p>
-          <button 
+          <button
             onClick={() => {
               const element = document.querySelector("#contact");
               if (element) element.scrollIntoView({ behavior: "smooth" });
             }}
-            className="px-10 py-4 bg-gradient-primary text-white rounded-2xl hover:shadow-glow transition-all duration-300 font-bold text-lg transform hover:scale-105"
+            className="px-10 py-4 bg-gradient-to-r from-teal-500 via-indigo-500 to-purple-600 text-white rounded-2xl hover:shadow-xl hover:shadow-teal-500/25 transition-all duration-300 font-bold text-lg transform hover:scale-105"
           >
             Start Free Trial
           </button>
@@ -107,4 +91,3 @@ export default function Features() {
     </section>
   );
 }
-
