@@ -5,16 +5,26 @@
 export interface EmailCredentials {
   fromEmail: string;
   toEmail: string;
+  toEmails: string[];
   apiKey?: string;
   brevoUser: string;
   brevoMasterKey: string;
   service: "brevo" | "sendgrid" | "nodemailer" | "mailgun";
 }
 
+function parseRecipientList(value: string): string[] {
+  return value
+    .split(/[;,]/)
+    .map((email) => email.trim())
+    .filter(Boolean);
+}
+
 export function getEmailCredentials(): EmailCredentials {
   // Read from environment variables
   const fromEmail = process.env.BREVO_FROM || process.env.EMAIL_FROM || "noreply@techhind.com";
-  const toEmail = process.env.BREVO_TO || process.env.EMAIL_TO || "contact@techhind.com";
+  const toEmailRaw = process.env.BREVO_TO || process.env.EMAIL_TO || "contact@techhind.com";
+  const toEmails = parseRecipientList(toEmailRaw);
+  const toEmail = toEmails.join(", ");
   const service = (process.env.EMAIL_SERVICE as EmailCredentials["service"]) || "brevo";
   const apiKey = process.env.BREVO_API_KEY || process.env.EMAIL_API_KEY || "";
   const brevoUser = process.env.BREVO_USER || "";
@@ -23,6 +33,7 @@ export function getEmailCredentials(): EmailCredentials {
   return {
     fromEmail,
     toEmail,
+    toEmails,
     apiKey,
     brevoUser,
     brevoMasterKey,
@@ -46,6 +57,7 @@ export function getEmailCredentialsFromFile(): EmailCredentials {
     return {
       fromEmail: "noreply@techhind.com",
       toEmail: "contact@techhind.com",
+      toEmails: ["contact@techhind.com"],
       apiKey: "",
       brevoUser: "",
       brevoMasterKey: "",

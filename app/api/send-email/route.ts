@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
     // Email content
     const emailContent = {
       from: credentials.fromEmail,
-      to: credentials.toEmail,
+      to: credentials.toEmails,
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -45,7 +45,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    if (!credentials.brevoUser || !credentials.brevoMasterKey || !credentials.fromEmail || !credentials.toEmail) {
+    if (
+      !credentials.brevoUser ||
+      !credentials.brevoMasterKey ||
+      !credentials.fromEmail ||
+      credentials.toEmails.length === 0
+    ) {
       return NextResponse.json(
         {
           error:

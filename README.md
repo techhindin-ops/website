@@ -79,7 +79,7 @@ To enable contact form email sending:
 ```env
 EMAIL_SERVICE=brevo
 BREVO_FROM=noreply@techhind.com
-BREVO_TO=contact@techhind.com
+BREVO_TO=contact@techhind.com,owner@techhind.com
 BREVO_USER=your_brevo_login_email
 BREVO_MASTER_KEY=your_brevo_master_key
 # Optional (not required for SMTP flow):
@@ -90,9 +90,10 @@ BREVO_API_KEY=your_brevo_api_key_here
    - Sign up at https://www.brevo.com
    - Go to Brevo Dashboard -> SMTP & API
    - Use SMTP credentials for `BREVO_USER` and `BREVO_MASTER_KEY`
-   - Set sender as `BREVO_FROM` and destination inbox as `BREVO_TO`
+   - Set sender as `BREVO_FROM` and destination inbox(es) as `BREVO_TO`
 
 4. Ensure all required SMTP vars are set: `BREVO_USER`, `BREVO_MASTER_KEY`, `BREVO_FROM`, `BREVO_TO`.
+   - `BREVO_TO` supports multiple addresses separated by comma or semicolon.
 
 Note: Website contact form now uses Brevo SMTP relay (same pattern as platform backend).
 
