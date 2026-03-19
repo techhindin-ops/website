@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { siteData } from "../data/siteData";
 
 export default function Footer() {
@@ -9,17 +9,7 @@ export default function Footer() {
 
   return (
     <>
-      {/* Floating WhatsApp CTA */}
-      <a
-        href={`https://wa.me/${contact.whatsapp}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 group flex items-center gap-3 bg-[#00823b] hover:bg-[#00662e] text-white pl-4 pr-5 py-3 rounded-full shadow-2xl hover:shadow-glow transition-all duration-200 transform hover:scale-105"
-        aria-label="Chat on WhatsApp"
-      >
-        <MessageCircle className="h-6 w-6 fill-white" />
-        <span className="font-semibold text-sm hidden sm:block">Chat on WhatsApp</span>
-      </a>
+      {/* Floating social CTA hidden for now; kept in code history for future enablement. */}
 
       <footer className="bg-[#0b1c33] text-gray-300 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,130,59,0.1),transparent_70%)]" />
@@ -57,45 +47,7 @@ export default function Footer() {
                 </div>
               </div>
 
-              {/* Social Media Icons */}
-              <div className="flex items-center gap-3">
-                <a
-                  href={contact.socialMedia.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-[#1b365d] border border-white/10 rounded-xl flex items-center justify-center transition-all duration-300 hover:border-white/30 hover:scale-110"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="h-4 w-4" />
-                </a>
-                <a
-                  href={contact.socialMedia.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-[#1b365d] border border-white/10 rounded-xl flex items-center justify-center transition-all duration-300 hover:border-white/30 hover:scale-110"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="h-4 w-4" />
-                </a>
-                <a
-                  href={contact.socialMedia.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-[#1b365d] border border-white/10 rounded-xl flex items-center justify-center transition-all duration-300 hover:border-white/30 hover:scale-110"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="h-4 w-4" />
-                </a>
-                <a
-                  href={`https://wa.me/${contact.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-[#1b365d] border border-white/10 rounded-xl flex items-center justify-center transition-all duration-300 hover:border-white/30 hover:scale-110"
-                  aria-label="WhatsApp"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                </a>
-              </div>
+              {/* Footer social media icon section hidden for now; kept for future enablement. */}
             </div>
 
             {/* Product Links */}

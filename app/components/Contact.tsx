@@ -166,40 +166,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="mt-8">
-                <h4 className="font-semibold text-gray-900 mb-4">
-                  Follow Us
-                </h4>
-                <div className="flex space-x-4">
-                  <a
-                    href={contact.socialMedia.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-gradient-to-br from-[#00823b] to-[#1b365d] rounded-xl flex items-center justify-center hover:shadow-glow transition-all transform hover:scale-110"
-                    aria-label="LinkedIn"
-                  >
-                    <span className="text-white font-bold">in</span>
-                  </a>
-                  <a
-                    href={contact.socialMedia.twitter}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-gradient-to-br from-[#00823b] to-[#1b365d] rounded-xl flex items-center justify-center hover:shadow-glow transition-all transform hover:scale-110"
-                    aria-label="Twitter"
-                  >
-                    <span className="text-white font-bold">X</span>
-                  </a>
-                  <a
-                    href={contact.socialMedia.facebook}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-gradient-to-br from-[#00823b] to-[#1b365d] rounded-xl flex items-center justify-center hover:shadow-glow transition-all transform hover:scale-110"
-                    aria-label="Facebook"
-                  >
-                    <span className="text-white font-bold">f</span>
-                  </a>
-                </div>
-              </div>
+              {/* Social media section hidden for now; kept in code for future enablement. */}
             </div>
 
             {/* Contact Form */}
