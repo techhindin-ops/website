@@ -446,7 +446,7 @@ export const siteData = {
       product: ["Features", "Pricing", "Integrations", "Updates"],
       company: ["About Us", "Careers", "Blog", "Contact"],
       resources: ["Documentation", "Help Center", "API Reference", "Community"],
-      legal: ["Privacy Policy", "Terms of Service", "Cookie Policy"],
+      legal: ["Privacy Policy", "Terms & Conditions", "Cookie Policy"],
     },
   },
 };

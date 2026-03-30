@@ -104,7 +104,15 @@ export default function Footer() {
                 {footer.links.legal.map((link) => (
                   <a
                     key={link}
-                    href="#"
+                    href={
+                      link === "Privacy Policy" 
+                        ? "/privacy-policy"
+                        : link === "Terms & Conditions"
+                        ? "/terms-conditions"
+                        : link === "Data Deletion Instructions"
+                        ? "/data-deletion"
+                        : "#"
+                    }
                     className="text-gray-400 hover:text-[#00823b] transition-colors text-sm"
                   >
                     {link}
