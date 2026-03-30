@@ -13,7 +13,7 @@ export default function PrivacyPolicy() {
     <div className="min-h-screen bg-[#0b1c33]">
       <Header />
       
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 lg:pt-40 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
@@ -165,7 +165,7 @@ export default function PrivacyPolicy() {
                     <p className="mt-4">
                       Meta users requesting deletion of their Lead Ads data may contact:
                     </p>
-                    <p className="text-[#00823b] font-medium">privacy@techhind.com</p>
+                    <p className="text-[#00823b] font-medium">privacy@techhind.in</p>
                   </section>
 
                   {/* Section 5 */}
@@ -258,7 +258,7 @@ export default function PrivacyPolicy() {
                     <p className="mt-4">
                       Meta Lead Ads users may request deletion by contacting:
                     </p>
-                    <p className="text-[#00823b] font-medium">privacy@techhind.com</p>
+                    <p className="text-[#00823b] font-medium">privacy@techhind.in</p>
                     <p className="mt-2">
                       Requests are processed within statutory timelines.
                     </p>
@@ -300,7 +300,7 @@ export default function PrivacyPolicy() {
                     <div className="bg-[#0f2942] rounded-lg p-4 mt-4">
                       <p className="font-semibold text-white mb-2">Grievance Officer</p>
                       <p className="text-gray-300">Techhind Private Limited</p>
-                      <p className="text-gray-300 mt-2">Email: support@techhind.com</p>
+                      <p className="text-gray-300 mt-2">Email: support@techhind.in</p>
                       <p className="text-gray-300">Address: Vijapur, Gujarat, India</p>
                     </div>
                   </section>
@@ -328,8 +328,8 @@ export default function PrivacyPolicy() {
                     <p className="mb-4">For privacy-related concerns:</p>
                     <div className="bg-[#0f2942] rounded-lg p-4">
                       <p className="text-gray-300">Techhind Private Limited</p>
-                      <p className="text-gray-300">Website: www.techhind.com</p>
-                      <p className="text-[#00823b] font-medium">Email: privacy@techhind.com</p>
+                      <p className="text-gray-300">Website: www.techhind.in</p>
+                      <p className="text-[#00823b] font-medium">Email: privacy@techhind.in</p>
                     </div>
                   </section>
 

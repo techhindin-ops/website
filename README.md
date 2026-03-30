@@ -62,7 +62,7 @@ Simply open `app/data/siteData.ts` and update the values. Changes will automatic
 ```typescript
 // In app/data/siteData.ts
 contact: {
-  email: "your-email@techhind.com",  // Update this
+  email: "your-email@techhind.in",  // Update this
   phone: "+91-1234567890",            // Update this
   address: "Your actual address",     // Update this
   // ...
@@ -78,8 +78,8 @@ To enable contact form email sending:
 2. Update `.env.local` with Brevo credentials:
 ```env
 EMAIL_SERVICE=brevo
-BREVO_FROM=noreply@techhind.com
-BREVO_TO=contact@techhind.com,owner@techhind.com
+BREVO_FROM=noreply@techhind.in
+BREVO_TO=contact@techhind.in,owner@techhind.in
 BREVO_USER=your_brevo_login_email
 BREVO_MASTER_KEY=your_brevo_master_key
 # Optional (not required for SMTP flow):

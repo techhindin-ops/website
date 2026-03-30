@@ -13,7 +13,7 @@ export default function DataDeletion() {
     <div className="min-h-screen bg-[#0b1c33]">
       <Header />
       
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 lg:pt-40 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
@@ -87,7 +87,7 @@ export default function DataDeletion() {
                       If you submitted your personal information through a Facebook or Instagram Lead Ad powered by Techhind-integrated systems, you may request deletion by contacting:
                     </p>
                     <div className="bg-[#0f2942] rounded-lg p-4">
-                      <p className="text-[#00823b] font-medium text-lg">privacy@techhind.com</p>
+                      <p className="text-[#00823b] font-medium text-lg">privacy@techhind.in</p>
                     </div>
                     <p className="mt-4 mb-2">Please include:</p>
                     <ul className="list-disc list-inside space-y-2 ml-4">
@@ -145,7 +145,7 @@ export default function DataDeletion() {
                       You may request deletion by emailing:
                     </p>
                     <div className="bg-[#0f2942] rounded-lg p-4">
-                      <p className="text-[#00823b] font-medium text-lg">privacy@techhind.com</p>
+                      <p className="text-[#00823b] font-medium text-lg">privacy@techhind.in</p>
                     </div>
                     <p className="mt-4">
                       We will process verified requests within statutory timelines.
@@ -166,7 +166,7 @@ export default function DataDeletion() {
                       Deletion requests may be submitted using:
                     </p>
                     <div className="bg-[#0f2942] rounded-lg p-4">
-                      <p className="text-[#00823b] font-medium text-lg">privacy@techhind.com</p>
+                      <p className="text-[#00823b] font-medium text-lg">privacy@techhind.in</p>
                     </div>
                   </section>
 
@@ -203,7 +203,7 @@ export default function DataDeletion() {
                       <p className="text-gray-300">Techhind Private Limited</p>
                       <p className="text-gray-300">Vijapur, Gujarat, India</p>
                       <p className="font-semibold text-white mt-4 mb-2">Email:</p>
-                      <p className="text-[#00823b] font-medium text-lg">privacy@techhind.com</p>
+                      <p className="text-[#00823b] font-medium text-lg">privacy@techhind.in</p>
                     </div>
                   </section>
 
@@ -216,7 +216,7 @@ export default function DataDeletion() {
                     <p className="mb-4">
                       Updates will be published on:
                     </p>
-                    <p className="text-[#00823b] font-medium">www.techhind.com/data-deletion</p>
+                    <p className="text-[#00823b] font-medium">www.techhind.in/data-deletion</p>
                   </section>
 
                 </div>

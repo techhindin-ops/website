@@ -21,8 +21,8 @@ function parseRecipientList(value: string): string[] {
 
 export function getEmailCredentials(): EmailCredentials {
   // Read from environment variables
-  const fromEmail = process.env.BREVO_FROM || process.env.EMAIL_FROM || "noreply@techhind.com";
-  const toEmailRaw = process.env.BREVO_TO || process.env.EMAIL_TO || "contact@techhind.com";
+  const fromEmail = process.env.BREVO_FROM || process.env.EMAIL_FROM || "noreply@techhind.in";
+  const toEmailRaw = process.env.BREVO_TO || process.env.EMAIL_TO || "contact@techhind.in";
   const toEmails = parseRecipientList(toEmailRaw);
   const toEmail = toEmails.join(", ");
   const service = (process.env.EMAIL_SERVICE as EmailCredentials["service"]) || "brevo";
@@ -55,9 +55,9 @@ export function getEmailCredentialsFromFile(): EmailCredentials {
   } catch (error) {
     console.error("Error reading credentials file:", error);
     return {
-      fromEmail: "noreply@techhind.com",
-      toEmail: "contact@techhind.com",
-      toEmails: ["contact@techhind.com"],
+      fromEmail: "noreply@techhind.in",
+      toEmail: "contact@techhind.in",
+      toEmails: ["contact@techhind.in"],
       apiKey: "",
       brevoUser: "",
       brevoMasterKey: "",

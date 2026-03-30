@@ -22,7 +22,7 @@ export const siteData = {
 
   // Contact Information
   contact: {
-    email: "contact@techhind.com",
+    email: "contact@techhind.in",
     phone: "+91-8485949461",
     whatsapp: "+918485949461",
     address: "47,Ambica society, Vijapur, Gujarat, 382870, India",
@@ -41,6 +41,9 @@ export const siteData = {
       { name: "Pricing", hasDropdown: true, href: "/pricing" },
       { name: "About Us", hasDropdown: true, href: "#about" },
       { name: "Contact Us", hasDropdown: true, href: "#contact" },
+      { name: "Privacy Policy", hasDropdown: false, href: "/privacy-policy" },
+      { name: "Terms & Conditions", hasDropdown: false, href: "/terms-conditions" },
+      { name: "Data Deletion", hasDropdown: false, href: "/data-deletion" },
     ],
     ctaButtons: {
       login: "Login",

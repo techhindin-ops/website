@@ -13,7 +13,7 @@ export default function TermsConditions() {
     <div className="min-h-screen bg-[#0b1c33]">
       <Header />
       
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16 lg:pt-40 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-12">
@@ -44,7 +44,7 @@ export default function TermsConditions() {
                 </p>
 
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>www.techhind.com</li>
+                  <li>www.techhind.in</li>
                   <li>Techhind ERP platform</li>
                   <li>Techhind CRM software</li>
                   <li>API integrations</li>
@@ -73,7 +73,7 @@ export default function TermsConditions() {
                       <p className="text-gray-300">Techhind Private Limited</p>
                       <p className="text-gray-300">Vijapur, Gujarat, India</p>
                       <p className="font-semibold text-white mt-4 mb-2">Contact Email:</p>
-                      <p className="text-[#00823b]">support@techhind.com</p>
+                      <p className="text-[#00823b]">support@techhind.in</p>
                     </div>
                   </section>
 
@@ -370,7 +370,7 @@ export default function TermsConditions() {
                     <p className="mb-4">
                       Use of our services is also governed by our Privacy Policy available on:
                     </p>
-                    <p className="text-[#00823b] font-medium">www.techhind.com/privacy-policy</p>
+                    <p className="text-[#00823b] font-medium">www.techhind.in/privacy-policy</p>
                   </section>
 
                   {/* Section 18 */}
@@ -418,7 +418,7 @@ export default function TermsConditions() {
                       <p className="text-gray-300">Techhind Private Limited</p>
                       <p className="text-gray-300">Vijapur, Gujarat, India</p>
                       <p className="font-semibold text-white mt-4 mb-2">Email:</p>
-                      <p className="text-[#00823b]">support@techhind.com</p>
+                      <p className="text-[#00823b]">support@techhind.in</p>
                     </div>
                   </section>
 
