@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 export const metadata: Metadata = {
   title: 'Privacy Policy - Techhind Private Limited',
   description: 'Techhind Private Limited Privacy Policy - How we collect, process, and protect your personal data in compliance with DPDP Act 2023 and Meta platform policies.',
-  keywords: ['privacy policy', 'data protection', 'DPDP Act 2023', 'Meta privacy', 'Techhind privacy'],
+  keywords: ['privacy policy', 'data protection', 'DPDP Act 2023', 'Meta privacy', 'Techhind privacy', 'SolarCRM', 'camera permission'],
 };
 
 export default function PrivacyPolicy() {
@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
               <div className="flex justify-center space-x-6 text-sm">
                 <span>Effective Date: 01 January 2026</span>
                 <span>•</span>
-                <span>Last Updated: 29 March 2026</span>
+                <span>Last Updated: 13 May 2026</span>
               </div>
             </div>
           </div>
@@ -128,12 +128,52 @@ export default function PrivacyPolicy() {
                           This data belongs to the respective advertiser/client business.
                         </p>
                       </div>
+
+                      <div>
+                        <h3 className="text-xl font-semibold text-white mb-3">SolarCRM: user accounts and business data</h3>
+                        <p className="mb-2">
+                          SolarCRM is a mobile application offered by Techhind Private Limited. SolarCRM may collect and process business-related information in order to provide ERP services and business workflow functionality, including:
+                        </p>
+                        <ul className="list-disc list-inside space-y-1 ml-4">
+                          <li>company details</li>
+                          <li>employee information</li>
+                          <li>authentication credentials</li>
+                          <li>operational records</li>
+                          <li>uploaded content</li>
+                        </ul>
+                        <p className="mt-2">
+                          All transmitted data is protected using industry-standard security practices, as described further in this policy.
+                        </p>
+                      </div>
                     </div>
                   </section>
 
                   {/* Section 3 */}
                   <section>
-                    <h2 className="text-2xl font-bold text-white mb-4">3. Purpose of Processing</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">3. Camera permission and device media (SolarCRM)</h2>
+                    <p className="mb-4">
+                      SolarCRM is offered by Techhind Private Limited. SolarCRM may request access to your device camera for business-related ERP operations such as:
+                    </p>
+                    <ul className="list-disc list-inside space-y-2 ml-4">
+                      <li>capturing site images</li>
+                      <li>uploading work progress photos</li>
+                      <li>scanning documents or QR codes</li>
+                      <li>attaching images to reports, tickets, or tasks</li>
+                    </ul>
+                    <p className="mt-4">
+                      The camera is accessed only when you explicitly use camera-related features inside the application. We do not access the camera in the background without user interaction or consent.
+                    </p>
+                    <p className="mt-4">
+                      Captured images and files are securely transmitted to our servers for authorized business operations and are not shared with unauthorized third parties.
+                    </p>
+                    <p className="mt-4 text-[#00823b]">
+                      If you deny camera permission, certain image capture or scanning features of the application may not function properly.
+                    </p>
+                  </section>
+
+                  {/* Section 4 */}
+                  <section>
+                    <h2 className="text-2xl font-bold text-white mb-4">4. Purpose of Processing</h2>
                     <p className="mb-4">
                       We process personal data only for legitimate business purposes including:
                     </p>
@@ -150,9 +190,9 @@ export default function PrivacyPolicy() {
                     </p>
                   </section>
 
-                  {/* Section 4 */}
+                  {/* Section 5 */}
                   <section>
-                    <h2 className="text-2xl font-bold text-white mb-4">4. Meta Platform & Third-Party Integrations</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">5. Meta Platform & Third-Party Integrations</h2>
                     <p className="mb-4">
                       In compliance with Meta Platform Terms:
                     </p>
@@ -168,9 +208,9 @@ export default function PrivacyPolicy() {
                     <p className="text-[#00823b] font-medium">privacy@techhind.in</p>
                   </section>
 
-                  {/* Section 5 */}
+                  {/* Section 6 */}
                   <section>
-                    <h2 className="text-2xl font-bold text-white mb-4">5. Legal Basis of Processing (DPDP Act 2023)</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">6. Legal Basis of Processing (DPDP Act 2023)</h2>
                     <p className="mb-4">
                       Techhind processes personal data based on:
                     </p>
@@ -182,9 +222,9 @@ export default function PrivacyPolicy() {
                     </ul>
                   </section>
 
-                  {/* Section 6 */}
+                  {/* Section 7 */}
                   <section>
-                    <h2 className="text-2xl font-bold text-white mb-4">6. Data Ownership & Retention</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">7. Data Ownership & Retention</h2>
                     <p className="mb-4">
                       Client organizations retain full ownership of their customer lead data.
                     </p>
@@ -199,9 +239,9 @@ export default function PrivacyPolicy() {
                     </p>
                   </section>
 
-                  {/* Section 7 */}
+                  {/* Section 8 */}
                   <section>
-                    <h2 className="text-2xl font-bold text-white mb-4">7. Data Security Measures</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">8. Data Security Measures</h2>
                     <p className="mb-4">
                       We implement industry-standard security safeguards including:
                     </p>
@@ -214,9 +254,9 @@ export default function PrivacyPolicy() {
                     </ul>
                   </section>
 
-                  {/* Section 8 */}
+                  {/* Section 9 */}
                   <section>
-                    <h2 className="text-2xl font-bold text-white mb-4">8. Cross-Border Data Transfers</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">9. Cross-Border Data Transfers</h2>
                     <p className="mb-4">
                       Some infrastructure providers used by Techhind may process data outside India.
                     </p>
@@ -228,9 +268,9 @@ export default function PrivacyPolicy() {
                     </ul>
                   </section>
 
-                  {/* Section 9 */}
+                  {/* Section 10 */}
                   <section>
-                    <h2 className="text-2xl font-bold text-white mb-4">9. Sub-Processors & Infrastructure Providers</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">10. Sub-Processors & Infrastructure Providers</h2>
                     <p className="mb-4">
                       Techhind may engage trusted infrastructure vendors including:
                     </p>
@@ -245,9 +285,9 @@ export default function PrivacyPolicy() {
                     </p>
                   </section>
 
-                  {/* Section 10 */}
+                  {/* Section 11 */}
                   <section>
-                    <h2 className="text-2xl font-bold text-white mb-4">10. User Rights Under DPDP Act 2023</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">11. User Rights Under DPDP Act 2023</h2>
                     <p className="mb-4">Users have the right to:</p>
                     <ul className="list-disc list-inside space-y-2 ml-4">
                       <li>request access to their data</li>
@@ -264,9 +304,9 @@ export default function PrivacyPolicy() {
                     </p>
                   </section>
 
-                  {/* Section 11 */}
+                  {/* Section 12 */}
                   <section>
-                    <h2 className="text-2xl font-bold text-white mb-4">11. Children's Data Policy</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">12. Children's Data Policy</h2>
                     <p className="mb-4">
                       Techhind services are not intended for individuals under 18 years of age.
                     </p>
@@ -278,9 +318,9 @@ export default function PrivacyPolicy() {
                     </p>
                   </section>
 
-                  {/* Section 12 */}
+                  {/* Section 13 */}
                   <section>
-                    <h2 className="text-2xl font-bold text-white mb-4">12. Data Breach Notification</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">13. Data Breach Notification</h2>
                     <p className="mb-4">
                       In the event of a data security incident affecting personal data, Techhind will:
                     </p>
@@ -291,9 +331,9 @@ export default function PrivacyPolicy() {
                     </ul>
                   </section>
 
-                  {/* Section 13 */}
+                  {/* Section 14 */}
                   <section>
-                    <h2 className="text-2xl font-bold text-white mb-4">13. Grievance Redressal Officer</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">14. Grievance Redressal Officer</h2>
                     <p className="mb-4">
                       In accordance with the Digital Personal Data Protection Act, 2023:
                     </p>
@@ -305,9 +345,9 @@ export default function PrivacyPolicy() {
                     </div>
                   </section>
 
-                  {/* Section 14 */}
+                  {/* Section 15 */}
                   <section>
-                    <h2 className="text-2xl font-bold text-white mb-4">14. Changes to This Policy</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">15. Changes to This Policy</h2>
                     <p className="mb-4">
                       Techhind may update this Privacy Policy periodically to reflect:
                     </p>
@@ -322,9 +362,9 @@ export default function PrivacyPolicy() {
                     </p>
                   </section>
 
-                  {/* Section 15 */}
+                  {/* Section 16 */}
                   <section>
-                    <h2 className="text-2xl font-bold text-white mb-4">15. Contact Information</h2>
+                    <h2 className="text-2xl font-bold text-white mb-4">16. Contact Information</h2>
                     <p className="mb-4">For privacy-related concerns:</p>
                     <div className="bg-[#0f2942] rounded-lg p-4">
                       <p className="text-gray-300">Techhind Private Limited</p>
