@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Data Deletion Instructions - Techhind Private Limited',
   description: 'Techhind Private Limited Data Deletion Instructions - How to request deletion of your personal data collected through our website, ERP platform, and Meta integrations.',
   keywords: ['data deletion', 'GDPR', 'DPDP Act', 'privacy rights', 'data removal', 'Techhind data deletion'],
+  alternates: {
+    canonical: '/data-deletion',
+  },
 };
 
 export default function DataDeletion() {

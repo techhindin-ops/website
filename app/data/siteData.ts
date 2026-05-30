@@ -15,9 +15,18 @@ export const siteData = {
 
   // SEO & Metadata
   seo: {
-    title: "techHind - India's Most Powerful CRM for Solar EPC Companies",
+    title: "Solar CRM for EPC Companies in India | techHind",
     description:
-      "From Lead generation to project completion — Manage your entire solar business with one powerful, cloud-based platform designed specifically for Indian solar companies.",
+      "Manage solar leads, projects, and payments in one CRM built for Indian EPC companies. From lead to commissioning — residential, commercial, and ground-mounted.",
+    keywords: [
+      "solar CRM India",
+      "CRM for solar EPC companies",
+      "solar project management software India",
+      "solar lead management software",
+      "solar EPC software",
+      "WhatsApp solar CRM",
+    ],
+    ogImage: "/og-image.png",
   },
 
   // Contact Information
@@ -446,9 +455,15 @@ export const siteData = {
   // Footer
   footer: {
     links: {
-      product: ["Features", "Pricing", "Integrations", "Updates"],
-      company: ["About Us", "Careers", "Blog", "Contact"],
-      resources: ["Documentation", "Help Center", "API Reference", "Community"],
+      product: [
+        { name: "Features", href: "/#features" },
+        { name: "Pricing", href: "/pricing" },
+      ],
+      company: [
+        { name: "About Us", href: "/#about" },
+        { name: "Contact", href: "/#contact" },
+      ],
+      resources: [{ name: "FAQ", href: "/#faq" }],
       legal: ["Privacy Policy", "Terms & Conditions", "Data Deletion Instructions"],
     },
   },

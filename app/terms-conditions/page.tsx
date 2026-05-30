@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Terms & Conditions - Techhind Private Limited',
   description: 'Techhind Private Limited Terms & Conditions - Legal terms governing the use of our ERP platform, CRM software, and business integration services.',
   keywords: ['terms and conditions', 'legal terms', 'service agreement', 'Techhind terms'],
+  alternates: {
+    canonical: '/terms-conditions',
+  },
 };
 
 export default function TermsConditions() {

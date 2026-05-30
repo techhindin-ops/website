@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Privacy Policy - Techhind Private Limited',
   description: 'Techhind Private Limited Privacy Policy - How we collect, process, and protect your personal data in compliance with DPDP Act 2023 and Meta platform policies.',
   keywords: ['privacy policy', 'data protection', 'DPDP Act 2023', 'Meta privacy', 'Techhind privacy', 'SolarCRM', 'camera permission'],
+  alternates: {
+    canonical: '/privacy-policy',
+  },
 };
 
 export default function PrivacyPolicy() {

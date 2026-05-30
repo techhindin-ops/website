@@ -30,51 +30,60 @@ export default function FAQ() {
         </div>
 
         <div className="max-w-3xl mx-auto space-y-4">
-          {faq.items.map((item, index) => (
-            <div
-              key={index}
-              className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
-                openIndex === index
-                  ? "border-[#1b365d]/20 bg-[#1b365d]/10 shadow-lg shadow-[#1b365d]/10"
-                  : "border-gray-200/70 bg-white hover:border-[#1b365d]/30 hover:shadow-md"
-              }`}
-            >
-              <button
-                onClick={() => toggle(index)}
-                className="w-full flex items-center justify-between px-6 py-5 text-left gap-4"
-              >
-                <span
-                  className={`font-semibold text-base sm:text-lg transition-colors ${
-                    openIndex === index ? "text-[#1b365d]" : "text-slate-800"
-                  }`}
-                >
-                  {item.question}
-                </span>
-                <ChevronDown
-                  className={`h-5 w-5 flex-shrink-0 transition-all duration-300 ${
-                    openIndex === index
-                      ? "rotate-180 text-[#1b365d]"
-                      : "text-slate-400"
-                  }`}
-                />
-              </button>
+          {faq.items.map((item, index) => {
+            const isOpen = openIndex === index;
 
-              {/* Answer — animated height */}
+            return (
               <div
-                className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                  openIndex === index ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
+                key={index}
+                className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+                  isOpen
+                    ? "border-[#1b365d]/20 bg-[#1b365d]/10 shadow-lg shadow-[#1b365d]/10"
+                    : "border-gray-200/70 bg-white hover:border-[#1b365d]/30 hover:shadow-md"
                 }`}
               >
-                <div className="px-6 pb-6">
-                  <div className="h-px bg-[#1b365d]/20 mb-4" />
-                  <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                <button
+                  type="button"
+                  onClick={() => toggle(index)}
+                  aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${index}`}
+                  className="w-full flex items-center justify-between px-6 py-5 text-left gap-4"
+                >
+                  <span
+                    id={`faq-question-${index}`}
+                    className={`font-semibold text-base sm:text-lg transition-colors ${
+                      isOpen ? "text-[#1b365d]" : "text-slate-800"
+                    }`}
+                  >
+                    {item.question}
+                  </span>
+                  <ChevronDown
+                    className={`h-5 w-5 flex-shrink-0 transition-all duration-300 ${
+                      isOpen ? "rotate-180 text-[#1b365d]" : "text-slate-400"
+                    }`}
+                  />
+                </button>
+
+                <div
+                  id={`faq-answer-${index}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${index}`}
+                  className={`grid transition-all duration-500 ease-in-out ${
+                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                  }`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-6 pb-6">
+                      <div className="h-px bg-[#1b365d]/20 mb-4" />
+                      <p className="text-gray-600 leading-relaxed">{item.answer}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        {/* Still have questions CTA */}
         <div className="mt-16 text-center">
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-[#f8fafc] border border-[#1b365d]/20 rounded-3xl px-8 py-6">
             <div className="text-left">
@@ -82,6 +91,7 @@ export default function FAQ() {
               <p className="text-gray-500 text-sm">Our team is happy to help. Reach out anytime.</p>
             </div>
             <button
+              type="button"
               onClick={() => {
                 const element = document.querySelector("#contact");
                 if (element) element.scrollIntoView({ behavior: "smooth" });

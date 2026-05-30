@@ -55,9 +55,9 @@ export default function Footer() {
               <h3 className="text-white font-bold mb-6 text-lg">Product</h3>
               <ul className="space-y-3">
                 {footer.links.product.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-gray-400 hover:text-[#00823b] transition-colors text-sm">
-                      {link}
+                  <li key={link.name}>
+                    <a href={link.href} className="text-gray-400 hover:text-[#00823b] transition-colors text-sm">
+                      {link.name}
                     </a>
                   </li>
                 ))}
@@ -69,9 +69,9 @@ export default function Footer() {
               <h3 className="text-white font-bold mb-6 text-lg">Company</h3>
               <ul className="space-y-3">
                 {footer.links.company.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-gray-400 hover:text-[#00823b] transition-colors text-sm">
-                      {link}
+                  <li key={link.name}>
+                    <a href={link.href} className="text-gray-400 hover:text-[#00823b] transition-colors text-sm">
+                      {link.name}
                     </a>
                   </li>
                 ))}
@@ -83,9 +83,9 @@ export default function Footer() {
               <h3 className="text-white font-bold mb-6 text-lg">Resources</h3>
               <ul className="space-y-3">
                 {footer.links.resources.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="text-gray-400 hover:text-[#00823b] transition-colors text-sm">
-                      {link}
+                  <li key={link.name}>
+                    <a href={link.href} className="text-gray-400 hover:text-[#00823b] transition-colors text-sm">
+                      {link.name}
                     </a>
                   </li>
                 ))}
