@@ -44,19 +44,18 @@ export const siteData = {
 
   // Navigation
   navigation: {
+    demoUrl: "https://demo.techhind.in/auth/preview",
     items: [
       { name: "Product", hasDropdown: true, href: "#features" },
       { name: "Resources", hasDropdown: true, href: "#faq" },
       { name: "Pricing", hasDropdown: true, href: "/pricing" },
-      { name: "About Us", hasDropdown: true, href: "#about" },
-      { name: "Contact Us", hasDropdown: true, href: "#contact" },
-      { name: "Privacy Policy", hasDropdown: false, href: "/privacy-policy" },
-      { name: "Terms & Conditions", hasDropdown: false, href: "/terms-conditions" },
-      { name: "Data Deletion", hasDropdown: false, href: "/data-deletion" },
+      { name: "About Us", hasDropdown: false, href: "#about" },
+      { name: "Contact", hasDropdown: false, href: "#contact" },
     ],
     ctaButtons: {
       login: "Login",
       bookDemo: "Book a Demo",
+      tryDemo: "Try Live Demo",
     },
   },
 
@@ -77,7 +76,7 @@ export const siteData = {
       "From Lead generation to project completion — Manage your entire solar business with one powerful, cloud-based platform designed specifically for Indian solar companies.",
     ctaButtons: {
       primary: "Get Started Today",
-      secondary: "Book a Demo",
+      secondary: "Try Live Demo",
     },
     featureHighlights: ["Residential", "Commercial", "Ground Mounted"],
     kpis: [
