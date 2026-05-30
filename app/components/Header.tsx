@@ -100,12 +100,6 @@ export default function Header() {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <button
-              onClick={() => handleNavClick("#contact")}
-              className="px-5 py-2 text-[#1b365d] font-semibold text-sm hover:text-[#00823b] transition-colors"
-            >
-              Log In
-            </button>
             <a
               href={demoUrl}
               target="_blank"
