@@ -1,6 +1,7 @@
 "use client";
 
 import { Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
 import { siteData } from "../data/siteData";
 
 export default function Footer() {
@@ -17,13 +18,14 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
             {/* Company Info */}
             <div className="lg:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#00823b] to-[#1b365d] rounded-xl flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-sm">{company.shortName}</span>
-                </div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-[#00823b] to-[#f37021] bg-clip-text text-transparent">
-                  {company.name}
-                </span>
+              <div className="flex items-center mb-6">
+                <Image
+                  src="/logo-transparent.png"
+                  alt="techHind - Solar CRM for EPC Companies"
+                  width={1780}
+                  height={338}
+                  className="h-10 w-auto"
+                />
               </div>
               <p className="text-gray-400 mb-6 max-w-md leading-relaxed">{company.tagline}</p>
 

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { siteData } from "../data/siteData";
@@ -53,12 +54,14 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center shadow-glow group-hover:scale-110 transition-transform duration-300">
-                <span className="text-white font-bold text-sm">{siteData.company.shortName}</span>
-              </div>
-              <span className="text-xl font-bold gradient-text">{siteData.company.name}</span>
-            </div>
+            <Image
+              src="/logo.png"
+              alt="techHind - Solar CRM for EPC Companies"
+              width={1780}
+              height={338}
+              className="h-9 sm:h-10 w-auto group-hover:opacity-90 transition-opacity"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
