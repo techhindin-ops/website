@@ -26,7 +26,7 @@ export const siteData = {
       "solar EPC software",
       "WhatsApp solar CRM",
     ],
-    ogImage: "/og-image.png",
+    ogImage: "/og-share.png",
   },
 
   // Contact Information
